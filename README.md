@@ -1,58 +1,37 @@
 # Portafolio de Benjamin
 
-Portafolio personal desarrollado con React, Vite y Tailwind CSS. Presenta el perfil, las tecnologías y proyectos de desarrollo web, móvil y de escritorio.
+Sitio personal para presentar mi perfil, las tecnologías que utilizo y algunos de mis proyectos de desarrollo web, móvil y de escritorio.
 
-## Requisitos
+## Tecnologías
 
-- Node.js
-- npm
+- React
+- Vite
+- Tailwind CSS
 
-## Empezar
+## Desarrollo local
+
+Necesitas [Node.js](https://nodejs.org/) y npm instalados.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Vite muestra la dirección local en la terminal, normalmente `http://localhost:5173`.
+Abre en el navegador la dirección local que muestra Vite en la terminal, normalmente `http://localhost:5173`.
 
 ## Comandos
 
-```bash
-npm run build
-npm run preview
-npm run lint
-```
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia el servidor de desarrollo. |
+| `npm run build` | Genera la versión de producción en `dist/`. |
+| `npm run preview` | Sirve localmente la versión de producción. |
+| `npm run lint` | Revisa el código con Oxlint. |
 
-## Publicar en GitHub Pages
+## Publicación en GitHub Pages
 
 1. Sube el proyecto a un repositorio de GitHub en la rama `main`.
-2. En el repositorio, abre **Settings > Pages**. Si GitHub muestra que Pages aún no está habilitado, selecciona **Build and deployment > Source > GitHub Actions**.
-3. Cada push a `main` ejecutará el workflow de `.github/workflows/deploy.yml` y publicará el sitio. También puedes iniciarlo manualmente desde la pestaña **Actions**.
+2. En el repositorio, ve a **Settings → Pages** y selecciona **GitHub Actions** como origen de publicación.
+3. Cada cambio que subas a `main` iniciará la publicación automáticamente. También puedes iniciar el workflow desde la pestaña **Actions**.
 
-El workflow configura automáticamente la ruta base de Vite para el nombre del repositorio. La página publicada aparecerá en **Settings > Pages** cuando termine correctamente el primer despliegue.
-
-Si `configure-pages` falla con un error `404` indicando que no encuentra el sitio de Pages, habilítalo primero en **Settings > Pages** como se indica arriba y vuelve a ejecutar el workflow. El aviso sobre Node.js 20 es una advertencia de las versiones de las acciones, no el error que detiene el despliegue.
-
-## Estructura
-
-```text
-public/
-  avatar.png
-  favicon.svg
-  projects/
-    cuentas-claras.png
-    guia-fotos.png
-    lifeinvader.png
-    mini-dbeaver.png
-src/
-  components/
-  data/portfolioData.js
-  App.jsx
-  index.css
-  main.jsx
-index.html
-package.json
-```
-
-Las dependencias instaladas (`node_modules`), el resultado de compilación (`dist`) y los archivos del sistema no se incluyen en Git, según `.gitignore`.
+Cuando termine la primera publicación, GitHub mostrará el enlace del sitio en **Settings → Pages**. La ruta base se configura automáticamente para el repositorio.
