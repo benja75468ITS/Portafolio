@@ -1,3 +1,5 @@
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`
+
 export const portfolioData = {
   profile: {
     name: "BENJAMIN",
@@ -8,7 +10,7 @@ export const portfolioData = {
     status: "DISPONIBLE PARA PROYECTOS & PASANTÍAS",
     github: "https://github.com/benja75468ITS",
     githubUsername: "benja75468ITS",
-    avatar: "/avatar.png",
+    avatar: assetUrl("avatar.png"),
     bio: "Desarrollador en formación con un enfoque integral. A lo largo de este semestre he explorado desde el desarrollo web front-end (HTML, CSS, JavaScript) hasta el desarrollo de aplicaciones móviles y de escritorio (Flutter, Java). Me apasiona crear interfaces limpias, funcionales y resolver problemas complejos mediante el código, como la gestión de bases de datos o la simplificación de deudas."
   },
 
@@ -53,7 +55,7 @@ export const portfolioData = {
       technologies: ["HTML", "CSS", "JavaScript"],
       github_url: "https://github.com/benja75468ITS/GuiaFotos",
       live_url: "https://benja75468its.github.io/GuiaFotos",
-      image: "/projects/guia-fotos.png"
+      image: assetUrl("projects/guia-fotos.png")
     },
     {
       id: "02",
@@ -64,7 +66,7 @@ export const portfolioData = {
       technologies: ["HTML", "CSS"],
       github_url: "https://github.com/benja75468ITS/ejercio3Dise-oweb",
       live_url: null,
-      image: "/projects/lifeinvader.png"
+      image: assetUrl("projects/lifeinvader.png")
     },
     {
       id: "03",
@@ -75,7 +77,7 @@ export const portfolioData = {
       technologies: ["Flutter", "Dart", "GitHub Actions"],
       github_url: "https://github.com/benja75468ITS/cuentas_claras",
       live_url: null,
-      image: "/projects/cuentas-claras.png"
+      image: assetUrl("projects/cuentas-claras.png")
     },
     {
       id: "04",
@@ -86,7 +88,7 @@ export const portfolioData = {
       technologies: ["Java", "JavaFX", "MariaDB", "SQLite", "SSH"],
       github_url: "https://github.com/benja75468ITS/MiniDBeaverGG",
       live_url: null,
-      image: "/projects/mini-dbeaver.png"
+      image: assetUrl("projects/mini-dbeaver.png")
     }
   ]
 };
