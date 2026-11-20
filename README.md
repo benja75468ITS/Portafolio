@@ -27,10 +27,12 @@ npm run lint
 ## Publicar en GitHub Pages
 
 1. Sube el proyecto a un repositorio de GitHub en la rama `main`.
-2. En el repositorio, abre **Settings > Pages** y selecciona **GitHub Actions** como origen del despliegue.
+2. En el repositorio, abre **Settings > Pages**. Si GitHub muestra que Pages aún no está habilitado, selecciona **Build and deployment > Source > GitHub Actions**.
 3. Cada push a `main` ejecutará el workflow de `.github/workflows/deploy.yml` y publicará el sitio. También puedes iniciarlo manualmente desde la pestaña **Actions**.
 
 El workflow configura automáticamente la ruta base de Vite para el nombre del repositorio. La página publicada aparecerá en **Settings > Pages** cuando termine correctamente el primer despliegue.
+
+Si `configure-pages` falla con un error `404` indicando que no encuentra el sitio de Pages, habilítalo primero en **Settings > Pages** como se indica arriba y vuelve a ejecutar el workflow. El aviso sobre Node.js 20 es una advertencia de las versiones de las acciones, no el error que detiene el despliegue.
 
 ## Estructura
 
