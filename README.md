@@ -24,6 +24,14 @@ npm run preview
 npm run lint
 ```
 
+## Publicar en GitHub Pages
+
+1. Sube el proyecto a un repositorio de GitHub en la rama `main`.
+2. En el repositorio, abre **Settings > Pages** y selecciona **GitHub Actions** como origen del despliegue.
+3. Cada push a `main` ejecutará el workflow de `.github/workflows/deploy.yml` y publicará el sitio. También puedes iniciarlo manualmente desde la pestaña **Actions**.
+
+El workflow configura automáticamente la ruta base de Vite para el nombre del repositorio. La página publicada aparecerá en **Settings > Pages** cuando termine correctamente el primer despliegue.
+
 ## Estructura
 
 ```text
